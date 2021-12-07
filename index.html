@@ -10,10 +10,15 @@
     <script src="https://d3js.org/d3.v7.min.js"></script>
     <script>
       async function loadData() {
-        const data = await d3.csv("./violence_data.csv")
+        const data = await d3.csv("./NYCdata.csv")
         console.log(data)
       }
       loadData()
+
+      // CSV
+      d3.csv('NYCdata.csv')
+        .then(csv => console.log(csv))
+
     </script>
   </body>
 </html>
