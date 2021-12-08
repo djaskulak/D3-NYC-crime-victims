@@ -568,7 +568,7 @@ async function handleData() {
       .attr('y', d => STR18yscale(d.value))
       .attr('width', STR18xscale.bandwidth())
       .attr('height', d => height - STR18yscale(d.value))
-    const STR18bottomAxis = d3.axisBottom(A18xscale)
+    const STR18bottomAxis = d3.axisBottom(STR18xscale)
     strangleSvg2018
       .append('g')
       .attr('transform', `translate(${0}, ${height})`)
@@ -618,6 +618,128 @@ async function handleData() {
       .append('g')
       .attr('transform', 'translate(40, 10)')
       .call(STR19leftAxis)
+
+    /* --------------------------------STALKING DATA------------------------------------- */
+    /* -------------- 2017 -------------- */
+    const stalkingData2017 = [
+      {name: "Female", value: parseInt(data[0].Stalking_Female)},
+      {name: "Male", value: parseInt(data[0].Stalking_Male)}
+    ]
+    console.log(stalkingData2017)
+    // x scale 
+    const STA17xscale = d3.scaleBand()
+      .domain(stalkingData2017.map(d => d.name))
+      .range([margin.left, width + margin.left])
+      .padding(0.05)
+    // y scale 
+    const STA17yscale = d3.scaleLinear()
+      .domain([0, 280])
+      .range([height - margin.top, 0])
+    // Select the SVG
+    const stalkingSvg2017 = d3.select('#stalkingSvg2017')
+    const STA17barGroup = stalkingSvg2017.append('g')
+    // Make the bars
+    STA17barGroup 
+      .selectAll('rect')
+      .data(stalkingData2017)
+      .enter()
+      .append('rect')
+      .attr('class', 'bar')
+      .attr('x', (d, i) => STR17xscale(d.name))
+      .attr('y', d => STA17yscale(d.value))
+      .attr('width', STA17xscale.bandwidth())
+      .attr('height', d => height - STA17yscale(d.value))
+    const STA17bottomAxis = d3.axisBottom(STA17xscale)
+    stalkingSvg2017
+      .append('g')
+      .attr('transform', `translate(${0}, ${height})`)
+      .call(STA17bottomAxis)
+    const STA17leftAxis = d3.axisLeft(STA17yscale)
+    stalkingSvg2017
+      .append('g')
+      .attr('transform', 'translate(40, 10)')
+      .call(STA17leftAxis)
+  
+  
+    /* -------------- 2018 -------------- */
+    const stalkingData2018 = [
+      {name: "Female", value: parseInt(data[1].Stalking_Female)},
+      {name: "Male", value: parseInt(data[1].Stalking_Male)}
+    ]
+    console.log(stalkingData2018)
+    // x scale 
+    const STA18xscale = d3.scaleBand()
+      .domain(stalkingData2018.map(d => d.name))
+      .range([margin.left, width + margin.left])
+      .padding(0.05)
+    // y scale 
+    const STA18yscale = d3.scaleLinear()
+      .domain([0, 280])
+      .range([height - margin.top, 0])
+    // Select the SVG
+    const stalkingSvg2018 = d3.select('#stalkingSvg2018')
+    const STA18barGroup = stalkingSvg2018.append('g')
+    // Make the bars
+    STA18barGroup 
+      .selectAll('rect')
+      .data(stalkingData2018)
+      .enter()
+      .append('rect')
+      .attr('class', 'bar')
+      .attr('x', (d, i) => STA18xscale(d.name))
+      .attr('y', d => STA18yscale(d.value))
+      .attr('width', STA18xscale.bandwidth())
+      .attr('height', d => height - STA18yscale(d.value))
+    const STA18bottomAxis = d3.axisBottom(STA18xscale)
+    stalkingSvg2018
+      .append('g')
+      .attr('transform', `translate(${0}, ${height})`)
+      .call(STA18bottomAxis)
+    const STA18leftAxis = d3.axisLeft(STA18yscale)
+    stalkingSvg2018
+      .append('g')
+      .attr('transform', 'translate(40, 10)')
+      .call(STA18leftAxis)
+  
+    /* -------------- 2019 -------------- */
+    const stalkingData2019 = [
+      {name: "Female", value: parseInt(data[2].Stalking_Female)},
+      {name: "Male", value: parseInt(data[2].Stalking_Male)}
+    ]
+    console.log(stalkingData2019)
+    // x scale 
+    const STA19xscale = d3.scaleBand()
+      .domain(stalkingData2019.map(d => d.name))
+      .range([margin.left, width + margin.left])
+      .padding(0.05)
+    // y scale 
+    const STA19yscale = d3.scaleLinear()
+      .domain([0, 280])
+      .range([height - margin.top, 0])
+    // Select the SVG
+    const stalkingSvg2019 = d3.select('#stalkingSvg2019')
+    const STA19barGroup = stalkingSvg2019.append('g')
+    // Make the bars
+    STA19barGroup 
+      .selectAll('rect')
+      .data(stalkingData2019)
+      .enter()
+      .append('rect')
+      .attr('class', 'bar')
+      .attr('x', (d, i) => STA19xscale(d.name))
+      .attr('y', d => STA19yscale(d.value))
+      .attr('width', STA19xscale.bandwidth())
+      .attr('height', d => height - STA19yscale(d.value))
+    const STA19bottomAxis = d3.axisBottom(STA19xscale)
+    stalkingSvg2019
+      .append('g')
+      .attr('transform', `translate(${0}, ${height})`)
+      .call(STA19bottomAxis)
+    const STA19leftAxis = d3.axisLeft(STA19yscale)
+    stalkingSvg2019
+      .append('g')
+      .attr('transform', 'translate(40, 10)')
+      .call(STA19leftAxis)
   /* ---------------------------------------------------------------------------------------- */
 
 }
