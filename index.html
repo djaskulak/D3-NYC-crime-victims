@@ -19,6 +19,10 @@
     <div class="rapeStats">
       <h3>Rape Victims</h3>
       <h7>Note: These are the numbers of rapes reported to NYPD, not a total of all rapes in NYC.</h7>
+      <button onclick="update(rapeData2017)">2017</button>
+      <button onclick="update(rapeData2018)">2018</button>
+      <button onclick="update(rapeData2019)">2018</button>
+      <div id="rapeData"></div>
       <h4>2017</h4>
       <svg id="rapeSvg2017" width="800" height="300"></svg>
       <h4>2018</h4>
@@ -77,6 +81,8 @@
       <h4>2019</h4>
       <svg id="stalkingSvg2019" width="800" height="300"></svg>
     </div>
+
+    <svg id="svg" width="800" height="800"></svg>
 
     <footer>
       <p id="name">site made by Danika Jaskulak-Gonzalez</p>
