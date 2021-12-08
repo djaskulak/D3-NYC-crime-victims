@@ -12,7 +12,7 @@
 
   </head>
   <body>
-    <nav class="navbar navbar-expand-lg navbar-light bg-light">
+    <nav class="navbar navbar-expand-lg sticky-top navbar-light bg-light">
       <div class="container-fluid">
         <a class="navbar-brand" href="#">Crimes</a>
         <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavDropdown" aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation">
@@ -24,22 +24,22 @@
               <a class="nav-link active" aria-current="page" href="index.html">Home</a>
             </li>
             <li class="nav-item">
-              <a class="nav-link" href="#">Murder</a>
+              <a class="nav-link" href="#rape">Rape</a>
             </li>
             <li class="nav-item">
-              <a class="nav-link" href="#">Rape</a>
+              <a class="nav-link" href="#murder">Murder</a>
             </li>
             <li class="nav-item">
-              <a class="nav-link" href="#">Sex Offense</a>
+              <a class="nav-link" href="#sexOffense">Sex Offense</a>
             </li>
             <li class="nav-item">
-              <a class="nav-link" href="#">Assault</a>
+              <a class="nav-link" href="#assault">Assault</a>
             </li>
             <li class="nav-item">
-              <a class="nav-link" href="#">Strangulation</a>
+              <a class="nav-link" href="#strangle">Strangulation</a>
             </li>
             <li class="nav-item">
-              <a class="nav-link" href="#">Stalking</a>
+              <a class="nav-link" href="#stalking">Stalking</a>
             </li>
           </ul>
         </div>
@@ -54,7 +54,7 @@
       </p>
 		</div>
 
-    <div class="rapeStats">
+    <div class="rapeStats" id="rape">
       <h3>Rape Victims</h3>
       <h7>Note: These are the numbers of rapes reported to NYPD, not a total of all rapes in NYC.</h7>
       <div id="rapeData"></div>
@@ -66,7 +66,7 @@
       <svg id="rapeSvg2019" width="800" height="300"></svg>
     </div>
 
-    <div class="murderStats">
+    <div class="murderStats" id="murder">
       <h3>Murder Victims</h3>
       <h4>2017</h4>
       <svg id="murderSvg2017" width="800" height="300"></svg>
@@ -76,7 +76,7 @@
       <svg id="murderSvg2019" width="800" height="300"></svg>
     </div>
 
-    <div class="sexOffensesStats">
+    <div class="sexOffensesStats" id="sexOffense">
       <h3>Sex Offense Victims</h3>
       <h7>Note: These are the numbers of sex offenses reported to NYPD, not a total of all sex offenses in NYC.</h7>
       <h4>2017</h4>
@@ -87,7 +87,7 @@
       <svg id="sexOffensesSvg2019" width="800" height="300"></svg>
     </div>
 
-    <div class="assaultStats">
+    <div class="assaultStats" id="assault">
       <h3>Felony Assault Victims</h3>
       <h4>2017</h4>
       <svg id="assaultSvg2017" width="800" height="300"></svg>
@@ -97,7 +97,7 @@
       <svg id="assaultSvg2019" width="800" height="300"></svg>
     </div>
 
-    <div class="strangleStats">
+    <div class="strangleStats" id="strangle">
       <h3>Strangulation Victims</h3>
       <h4>2017</h4>
       <svg id="strangleSvg2017" width="800" height="300"></svg>
@@ -107,7 +107,7 @@
       <svg id="strangleSvg2019" width="800" height="300"></svg>
     </div>
 
-    <div class="stalkingStats">
+    <div class="stalkingStats" id="stalking">
       <h3>Stalking Victims</h3>
       <h4>2017</h4>
       <svg id="stalkingSvg2017" width="800" height="300"></svg>

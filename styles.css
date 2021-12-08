@@ -4,3 +4,18 @@ body {
 
   text-align: center;
 }
+
+#rape, #murder, #sexOffense, #assault, #strangle, #stalking {
+  padding: 100px;
+
+  border: 5px solid #E9ECEF;
+  margin: 10px 20px;
+}
+
+h3 {
+
+}
+
+h4 {
+  padding-top: 20px;
+}
